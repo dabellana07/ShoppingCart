@@ -62,7 +62,7 @@ namespace ShoppingCart.Controllers
         {
             var cartItems = HttpContext.Session.Get<List<Item>>(CartSessionKey);
 
-            var itemToRemove = cartItems.SingleOrDefault(i => i.ID == id);
+            var itemToRemove = cartItems.FirstOrDefault(i => i.ID == id);
 
             if (itemToRemove != null)
             {

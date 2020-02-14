@@ -1,7 +1,35 @@
+@model IEnumerable<ShoppingCart.Models.Item>
+
 @{
     ViewData["Title"] = "Services Home Page";
 }
 
+<h5>Items Available</h5>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
 <div class="text-center">
-    <h1 class="display-4">Welcome to Services</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Price)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

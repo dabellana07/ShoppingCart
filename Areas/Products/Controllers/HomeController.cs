@@ -28,8 +28,10 @@ namespace ShoppingCart.Products.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var shopItems = await _context.Items.ToListAsync();
-            return View(shopItems);
+            var productItems = await _context.Items
+                .Where(i => i.Type == ItemType.Product)
+                .ToListAsync();
+            return View(productItems);
         }
 
         [HttpGet]

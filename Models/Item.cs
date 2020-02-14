@@ -12,5 +12,7 @@ namespace ShoppingCart.Models
 
         [DataType(DataType.Currency)]
         public double Price { get; set; }
+
+        public ItemType Type { get; set; }
     }
 }

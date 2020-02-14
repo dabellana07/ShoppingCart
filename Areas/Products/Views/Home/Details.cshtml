@@ -26,7 +26,7 @@
 </div>
 
 <div>
-    <form asp-controller="Cart" asp-action="Add" asp-route-id="@Model.ID" method="post">
+    <form asp-area="Cart" asp-controller="Home" asp-action="Add" asp-route-id="@Model.ID" method="post">
         <input type="submit" value="Add to Cart" class="btn btn-link" />
     </form>
     <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a>

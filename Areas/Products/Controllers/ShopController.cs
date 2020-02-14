@@ -5,8 +5,9 @@ using ShoppingCart.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ShoppingCart.Controllers
+namespace ShoppingCart.Products.Controllers
 {
+    [Area("Products")]
     public class ShopController : Controller
     {
         private readonly ShoppingCartContext _context;

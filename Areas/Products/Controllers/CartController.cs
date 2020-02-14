@@ -8,8 +8,9 @@ using ShoppingCart.Data;
 using ShoppingCart.Extensions;
 using ShoppingCart.Models;
 
-namespace ShoppingCart.Controllers
+namespace ShoppingCart.Products.Controllers
 {
+    [Area("Products")]
     public class CartController : Controller
     {
         private readonly string CartSessionKey = "_Cart";

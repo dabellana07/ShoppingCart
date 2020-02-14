@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ShoppingCart.Models;
 
-namespace ShoppingCart.Controllers
+namespace ShoppingCart.Products.Controllers
 {
+    [Area("Products")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
